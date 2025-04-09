@@ -1,15 +1,20 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Customers_Report;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\invoiceArchiveController;
 use App\Http\Controllers\InvoiceAttachmentsController;
+use App\Http\Controllers\Invoices_Report;
 use App\Http\Controllers\InvoicesDetailsController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\InvoicesController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SectionsController;
+use App\Http\Controllers\UserController;
 use App\Mail\TestMail;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
@@ -63,7 +68,12 @@ Route::delete('/delete_file',[InvoicesDetailsController::class,'destroy'])->name
 Route::get('/InvoicesDetails/{id}',[InvoicesDetailsController::class,'edit']);
 //////////////////////////////////////////////////////////////////////////////
 Route::post('/InvoiceAttachments',[InvoiceAttachmentsController::class,'store']);
-
+Route::get('MarkAsRead_all',[InvoicesController::class,'MarkAsRead_all'])->name('MarkAsRead_all');
+//////////////////////////////////////////////////////////////////////////////
+Route::get('/invoices_report',[Invoices_Report::class,'index']);
+Route::post('Search_invoices', [Invoices_Report::class,'Search_invoices']);
+Route::get('customers_report',  [Customers_Report::class,'index']);
+Route::post('Search_customers', [Customers_Report::class,'Search_customers']);
 
 //////////////////////////////////////////////////////////////////////////////
 Route::get('/sections',[SectionsController::class,'index']);
@@ -76,6 +86,27 @@ Route::get('/products',[ProductsController::class,'index']);
 Route::post('/products/store',[ProductsController::class,'store'])->name('products.store');
 Route::patch('/products/update',[ProductsController::class,'update']);
 Route::delete('/products/destroy',[ProductsController::class,'destroy']);
+
+//////////////////////////////////////////////////////////////////////////////
+Route::group(['middleware' => ['auth']], function() {
+
+    Route::get('/users',[UserController::class,'index'])->name('users.index');
+    Route::get('/users/create',[UserController::class,'create'])->name('users.create');
+    Route::get('/users/edit/{id}',[UserController::class,'edit'])->name('users.edit');
+    Route::post('/users/store',[UserController::class,'store'])->name('users.store');
+    Route::patch('/users/update/{id}',[UserController::class,'update'])->name('users.update');
+    Route::delete('/users/destroy',[UserController::class,'destroy'])->name('users.destroy');
+
+    Route::get('/roles',[RoleController::class,'index'])->name('roles.index');
+    Route::get('/roles/create',[RoleController::class,'create'])->name('roles.create');
+    Route::get('/roles/{id}/edit', [RoleController::class, 'edit'])->name('roles.edit');
+    Route::get('/roles/{id}/show',[RoleController::class,'show'])->name('roles.show');
+
+    Route::post('/roles/store',[RoleController::class,'store'])->name('roles.store');
+    Route::patch('/roles/{id}/update',[RoleController::class,'update'])->name('roles.update');
+    Route::delete('/roles/{id}/destroy',[RoleController::class,'destroy'])->name('roles.destroy');
+
+});
 
 //////////////////////////////////////////////////////////////////////////////
 

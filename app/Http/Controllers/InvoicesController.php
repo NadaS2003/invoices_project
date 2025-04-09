@@ -8,6 +8,7 @@ use App\Models\invoices;
 use App\Models\invoices_details;
 use App\Models\sections;
 use App\Models\User;
+use App\Notifications\Add_invoice;
 use App\Notifications\AddInvoice;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -102,14 +103,26 @@ class InvoicesController extends Controller
         }
 
         //Mail
-        $user = User::query()->first();
-        Notification::send($user,new AddInvoice($invoice_id));
+        //        Notification::send($user,new AddInvoice($invoice_id));
+//اشعار فقط للي انشا الفاتورة
+        //  $user = User::query()->find(Auth::user()->id);
+     //   $user->notify(new Add_invoice($invoices));
+        $user = User::all(); // اشعار للجميع
+        $invoices= invoices::latest()->first();
+        Notification::send($user, new Add_invoice($invoices));
+
         // Flash message and redirect
         session()->flash('Add', 'تم إضافة الفاتورة بنجاح');
         return redirect()->back(); // Redirect to invoices page
     }
 
-
+    public function MarkAsRead_all(Request $request){
+        $userUnreadNotification = \auth()->user()->unreadNotifications;
+        if ($userUnreadNotification){
+            $userUnreadNotification->markAsRead();
+            return back();
+        }
+    }
 
     public function invoice_paid(){
         $invoices = invoices::query()->where('Value_status',1)->get();
