@@ -17,18 +17,37 @@ class createAdminUserSeeder extends Seeder
      */
     public function run()
     {
-        $user =User::query()->create([
-            'name'=> 'Nada Salama',
-            'email'=>'nadaramadan1512003@gmail.com',
-            'password'=> bcrypt('123456'),
-            'roles_name'=>['owner'],
-            'status'=>'مفعل'
+//        $user =User::query()->create([
+//            'name'=> 'Nada Salama',
+//            'email'=>'nadaramadan1512003@gmail.com',
+//            'password'=> bcrypt('123456'),
+//            'roles_name'=>['owner'],
+//            'status'=>'مفعل'
+//        ]);
+//
+//        $role = Role::create(['name'=>'owner']);
+//        $permissions = Permission::pluck('id','id')->all();
+//        $role->syncPermissions($permissions);
+//        $user->assignRole([$role->id]);
+
+        $user = User::create([
+            'name' => 'Nada Salama',
+            'email' => 'nadaramadan1512003@gmail.com',
+            'password' => bcrypt('123456'),
+            'roles_name' => ['owner'],
+            'status' => 'مفعل'
         ]);
 
-        $role = Role::create(['name'=>'owner']);
-        $permissions = Permission::pluck('id','id')->all();
-        $role->syncPermissions($permissions);
-        $user->assignRole([$role->id]);
+        $role = Role::firstOrCreate(
+            ['name' => 'owner'],
+            ['guard_name' => 'web']
+        );
 
+        $permissions = Permission::pluck('id')->toArray();
+        $role->syncPermissions($permissions);
+
+        $user->assignRole('owner'); // ✔️
     }
+
+
 }

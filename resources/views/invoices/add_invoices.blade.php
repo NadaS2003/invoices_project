@@ -85,11 +85,16 @@
                                 </select>
                             </div>
 
+
+
                             <div class="col">
                                 <label for="inputName" class="control-label">المنتج</label>
                                 <select id="product" name="product" class="form-control">
                                 </select>
                             </div>
+
+
+
 
                             <div class="col">
                                 <label for="inputName" class="control-label">مبلغ التحصيل</label>
@@ -217,28 +222,46 @@
         $(document).ready(function() {
             $('select[name="Section"]').on('change', function() {
                 var SectionId = $(this).val();
+                var productSelect = $('select[name="product"]');
+
+                // تعطيل واختبار
+                productSelect.prop('disabled', true);
+                productSelect.empty().append('<option>جاري التحميل...</option>');
+
                 if (SectionId) {
                     $.ajax({
                         url: "{{ URL::to('section') }}/" + SectionId,
                         type: "GET",
                         dataType: "json",
                         success: function(data) {
-                            $('select[name="product"]').empty();
-                            $.each(data, function(key, value) {
-                                $('select[name="product"]').append('<option value="' +
-                                    value + '">' + value + '</option>');
-                            });
-                        },
-                    });
 
-                } else {
-                    console.log('AJAX load did not work');
+                            productSelect.prop('disabled', false);
+                            productSelect.empty();
+                            productSelect.append('<option disabled selected>حدد المنتج</option>');
+
+                            if (data.length === 0) {
+                                productSelect.append('<option disabled>لا يوجد منتجات</option>');
+                            }
+
+                            // اضافة المنتجات بشكل صحيح
+                            $.each(data, function(index, product) {
+                                productSelect.append(
+                                    '<option value="' + product.id + '">' + product.product_name + '</option>'
+                                );
+                            });
+
+                        },
+                        error: function(err){
+                            console.log('AJAX error:', err);
+                        }
+                    });
                 }
             });
-
         });
-
     </script>
+
+
+
 
 
     <script>

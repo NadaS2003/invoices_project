@@ -47,9 +47,21 @@ class InvoicesController extends Controller
 
 
     public function getProducts($id){
-        $products = DB::table("products")->where('section_id',$id)->pluck('product_name','id');
-        return json_encode($products);
+        $products = DB::table("products")->where('section_id',$id) ->get(['id', 'Product_name as product_name']);
+
+        return response()->json($products);
     }
+
+//    public function getProducts($id)
+//    {
+//        // باستخدام DB::table
+//        $products = DB::table('products')
+//            ->where('section_id', $id)
+//            ->get(['id','product_name']); // جلب id واسم المنتج
+//
+//        return response()->json($products);
+//    }
+
     /**
      * Store a newly created resource in storage.
      *
