@@ -1,6 +1,6 @@
-<img width="1921" height="920" alt="3" src="https://github.com/user-attachments/assets/e6d9cf70-e112-4fb4-bb92-9d3b18d5cc39" /><img width="1921" height="920" alt="2" src="https://github.com/user-attachments/assets/372370a0-5dc0-48d8-830e-429a2e3195c7" /><p align="center">
+<p align="center">
     <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
-</p>
+</p>>
 
 <h1 align="center">Invoices Management System</h1>
 
