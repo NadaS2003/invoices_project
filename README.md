@@ -1,64 +1,90 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<img width="1921" height="920" alt="3" src="https://github.com/user-attachments/assets/e6d9cf70-e112-4fb4-bb92-9d3b18d5cc39" /><img width="1921" height="920" alt="2" src="https://github.com/user-attachments/assets/372370a0-5dc0-48d8-830e-429a2e3195c7" /><p align="center">
+    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
 </p>
 
-## About Laravel
+<h1 align="center">Invoices Management System</h1>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+A web-based system designed to create, manage, and organize invoices efficiently.  
+The platform allows businesses to track payments, manage clients, generate financial reports, and control user permissions through a role-based system.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The system simplifies invoice management and helps organizations maintain clear financial records and operational workflows.
+</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 📌 Project Overview
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Managing invoices manually can lead to errors and inefficiencies. This system provides a centralized solution where invoices can be created, tracked, printed, and archived while maintaining organized records of products, departments, and client transactions.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🚀 Key Features
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Create and manage invoices
+- Track invoice status (Paid / Unpaid / Partial)
+- Print and archive invoices
+- Client and financial reporting
+- Role-based user management
+- Product and department organization
+- Secure and structured data management
+- User-friendly administrative interface
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## 🛠️ Tech Stack
 
-## Contributing
+- PHP
+- Laravel 9
+- Blade Templating Engine
+- HTML5
+- CSS3
+- Bootstrap
+- JavaScript
+- MySQL
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 📷 Screenshots
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<img width="1921" height="920" alt="0" src="https://github.com/user-attachments/assets/e2fc7a07-aa4c-4b92-88cc-34b64b3d7966" />
 
-## Security Vulnerabilities
+<img width="1921" height="927" alt="1" src="https://github.com/user-attachments/assets/5f795f14-cdbc-4021-aa66-96e49970b3de" />
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<img width="1921" height="920" alt="2" src="https://github.com/user-attachments/assets/bc505f09-ee70-4a2e-9502-527bdd3e75fb" />
 
-## License
+<img width="1921" height="920" alt="3" src="https://github.com/user-attachments/assets/ac5bc740-fb37-441f-b873-df31baaf6682" />
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<img width="1921" height="920" alt="4" src="https://github.com/user-attachments/assets/2c407b1e-0686-4104-ba2a-c11ab5ea42ec" />
+
+<img width="1921" height="927" alt="5" src="https://github.com/user-attachments/assets/d59f19e7-7721-45de-b1ed-bd78c62a5fc3" />
+
+<img width="1921" height="927" alt="6" src="https://github.com/user-attachments/assets/e91cc93d-a8a3-4203-a87d-d314940af493" />
+
+<img width="1921" height="927" alt="7" src="https://github.com/user-attachments/assets/8948a6d5-0b6d-4bf3-80a2-5d21b116d088" />
+
+<img width="1921" height="1107" alt="8" src="https://github.com/user-attachments/assets/5568ee95-f43a-4615-b343-8b52874f91d2" />
+
+<img width="1921" height="1198" alt="9" src="https://github.com/user-attachments/assets/93cbb776-0805-485c-832f-b03b8cba6869" />
+
+<img width="1921" height="927" alt="10" src="https://github.com/user-attachments/assets/71042255-21bf-43be-83c8-f6504df9f3a9" />
+
+<img width="1921" height="927" alt="11" src="https://github.com/user-attachments/assets/7876fb64-3fde-4668-8409-e4dbcf489cdb" />
+
+<img width="1921" height="968" alt="12" src="https://github.com/user-attachments/assets/e8da3f58-f95d-4693-a6f3-0b7b6cf186a1" />
+
+<img width="1921" height="927" alt="13" src="https://github.com/user-attachments/assets/45c439c8-5b45-4d23-a38a-d7fe95a77ab2" />
+
+<img width="1921" height="1021" alt="14" src="https://github.com/user-attachments/assets/152e7497-f356-404d-adb3-39ec7bf39063" />
+
+<img width="1921" height="927" alt="15" src="https://github.com/user-attachments/assets/21884d69-0dd7-4861-bea6-08bc1d42b7ea" />
+
+<img width="1921" height="927" alt="16" src="https://github.com/user-attachments/assets/1c939b94-6c91-42e3-b42d-2b25dcb767b4" />
+
+<img width="1921" height="920" alt="17" src="https://github.com/user-attachments/assets/21895ac9-dd50-408e-a41e-224c81d66e4b" />
+
+<img width="1921" height="920" alt="18" src="https://github.com/user-attachments/assets/51545b04-2e2d-4f87-a74c-14b3f867fddc" />
+
+<img width="1921" height="920" alt="19" src="https://github.com/user-attachments/assets/33c891c7-c088-459e-850b-3de0a00ba7b8" />
+
+<img width="1921" height="920" alt="20" src="https://github.com/user-attachments/assets/4eed9ca0-c0cb-4108-af0a-ee63ded8f172" />
