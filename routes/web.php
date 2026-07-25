@@ -30,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 */
 require __DIR__.'/auth.php';
 Route::get('/', function () {
-    return view('Auth.login');
+    return view('auth.login');
 });
 
 Route::get('/invoices',[InvoicesController::class,'index']);
