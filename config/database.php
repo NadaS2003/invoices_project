@@ -58,10 +58,9 @@ return [
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
-           'options' => array_filter([
-                // أضيفي هذه الخيارات لتجاوز التحقق الصارم من شهادة الـ SSL للسيرفرات السحابية
+          'options' => [
                 PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
-            ]),
+            ],
         ],
 
         'pgsql' => [
