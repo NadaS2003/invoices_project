@@ -35,4 +35,4 @@ RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 EXPOSE 80
 
 # Run migrations, seeders, cache configuration, and start php-fpm
-CMD ["sh", "-c", "php artisan config:cache && php artisan route:cache && php artisan migrate --force && php artisan db:seed --force && php-fpm"]
+CMD ["sh", "-c", "php artisan config:cache && php artisan route:cache && php artisan migrate --force && php -S 0.0.0.0:$PORT -t public"]
