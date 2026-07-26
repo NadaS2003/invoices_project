@@ -3,7 +3,7 @@
     <!--Internal  Font Awesome -->
     <link href="{{secure_asset('assets/plugins/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
     <!--Internal  treeview -->
-    <link href="{{URL::asset('assets/plugins/treeview/treeview-rtl.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{secure_asset('assets/plugins/treeview/treeview-rtl.css')}}" rel="stylesheet" type="text/css" />
     @section('title')
         اضافة الصلاحيات - مورا سوفت للادارة القانونية
     @stop
@@ -95,5 +95,5 @@
 @endsection
 @section('js')
     <!-- Internal Treeview js -->
-    <script src="{{URL::asset('assets/plugins/treeview/treeview.js')}}"></script>
+    <script src="{{secure_asset('assets/plugins/treeview/treeview.js')}}"></script>
 @endsection

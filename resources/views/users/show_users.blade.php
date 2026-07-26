@@ -8,12 +8,12 @@
     <!-- Internal Data table css -->
 
     <link href="{{ secure_asset('assets/plugins/datatable/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/plugins/datatable/css/buttons.bootstrap4.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/plugins/datatable/css/responsive.bootstrap4.min.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/plugins/datatable/css/jquery.dataTables.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/plugins/datatable/css/responsive.dataTables.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('assets/plugins/datatable/css/buttons.bootstrap4.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('assets/plugins/datatable/css/responsive.bootstrap4.min.css') }}" rel="stylesheet" />
+    <link href="{{ secure_asset('assets/plugins/datatable/css/jquery.dataTables.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('assets/plugins/datatable/css/responsive.dataTables.min.css') }}" rel="stylesheet">
     <!--Internal   Notify -->
-    <link href="{{ URL::asset('assets/plugins/notify/css/notifIt.css') }}" rel="stylesheet" />
+    <link href="{{ secure_asset('assets/plugins/notify/css/notifIt.css') }}" rel="stylesheet" />
 
 @endsection
 @section('page-header')
@@ -145,22 +145,22 @@
 @endsection
 @section('js')
     <!-- Internal Data tables -->
-    <script src="{{ URL::asset('assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.dataTables.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.responsive.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/responsive.dataTables.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/jquery.dataTables.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.bootstrap4.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.buttons.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.responsive.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/responsive.bootstrap4.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/datatable/js/dataTables.dataTables.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/datatable/js/dataTables.responsive.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/datatable/js/responsive.dataTables.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/datatable/js/jquery.dataTables.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/datatable/js/dataTables.bootstrap4.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/datatable/js/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/datatable/js/dataTables.responsive.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/datatable/js/responsive.bootstrap4.min.js') }}"></script>
     <!--Internal  Datatable js -->
-    <script src="{{ URL::asset('assets/js/table-data.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/table-data.js') }}"></script>
     <!--Internal  Notify js -->
-    <script src="{{ URL::asset('assets/plugins/notify/js/notifIt.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/notify/js/notifit-custom.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/notify/js/notifIt.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/notify/js/notifit-custom.js') }}"></script>
     <!-- Internal Modal js-->
-    <script src="{{ URL::asset('assets/js/modal.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/modal.js') }}"></script>
 
     <script>
         $('#modaldemo8').on('show.bs.modal', function(event) {

@@ -1,11 +1,11 @@
 @extends('layouts.master')
 @section('css')
     <!---Internal  Prism css-->
-    <link href="{{URL::asset('assets/plugins/prism/prism.css')}}" rel="stylesheet">
+    <link href="{{secure_asset('assets/plugins/prism/prism.css')}}" rel="stylesheet">
     <!---Internal Input tags css-->
-    <link href="{{URL::asset('assets/plugins/inputtags/inputtags.css')}}" rel="stylesheet">
+    <link href="{{secure_asset('assets/plugins/inputtags/inputtags.css')}}" rel="stylesheet">
     <!--- Custom-scroll -->
-    <link href="{{URL::asset('assets/plugins/custom-scroll/jquery.mCustomScrollbar.css')}}" rel="stylesheet">
+    <link href="{{secure_asset('assets/plugins/custom-scroll/jquery.mCustomScrollbar.css')}}" rel="stylesheet">
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
@@ -292,21 +292,21 @@
 @endsection
 @section('js')
     <!--Internal  Datepicker js -->
-    <script src="{{URL::asset('assets/plugins/jquery-ui/ui/widgets/datepicker.js')}}"></script>
+    <script src="{{secure_asset('assets/plugins/jquery-ui/ui/widgets/datepicker.js')}}"></script>
     <!-- Internal Select2 js-->
-    <script src="{{URL::asset('assets/plugins/select2/js/select2.min.js')}}"></script>
+    <script src="{{secure_asset('assets/plugins/select2/js/select2.min.js')}}"></script>
     <!-- Internal Jquery.mCustomScrollbar js-->
-    <script src="{{URL::asset('assets/plugins/custom-scroll/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+    <script src="{{secure_asset('assets/plugins/custom-scroll/jquery.mCustomScrollbar.concat.min.js')}}"></script>
     <!-- Internal Input tags js-->
-    <script src="{{URL::asset('assets/plugins/inputtags/inputtags.js')}}"></script>
+    <script src="{{secure_asset('assets/plugins/inputtags/inputtags.js')}}"></script>
     <!--- Tabs JS-->
-    <script src="{{URL::asset('assets/plugins/tabs/jquery.multipurpose_tabcontent.js')}}"></script>
-    <script src="{{URL::asset('assets/js/tabs.js')}}"></script>
+    <script src="{{secure_asset('assets/plugins/tabs/jquery.multipurpose_tabcontent.js')}}"></script>
+    <script src="{{secure_asset('assets/js/tabs.js')}}"></script>
     <!--Internal  Clipboard js-->
-    <script src="{{URL::asset('assets/plugins/clipboard/clipboard.min.js')}}"></script>
-    <script src="{{URL::asset('assets/plugins/clipboard/clipboard.js')}}"></script>
+    <script src="{{secure_asset('assets/plugins/clipboard/clipboard.min.js')}}"></script>
+    <script src="{{secure_asset('assets/plugins/clipboard/clipboard.js')}}"></script>
     <!-- Internal Prism js-->
-    <script src="{{URL::asset('assets/plugins/prism/prism.js')}}"></script>
+    <script src="{{secure_asset('assets/plugins/prism/prism.js')}}"></script>
 
 
 

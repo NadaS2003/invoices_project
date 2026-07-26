@@ -30,4 +30,4 @@
 <script src="{{secure_asset('assets/js/sticky.js')}}"></script>
 <!-- custom js -->
 <script src="{{secure_asset('assets/js/custom.js')}}"></script><!-- Left-menu js-->
-<script src="{{URL::asset('assets/plugins/side-menu/sidemenu.js')}}"></script>
+<script src="{{secure_asset('assets/plugins/side-menu/sidemenu.js')}}"></script>
