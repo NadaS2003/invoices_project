@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('css')
     <!--Internal   Notify -->
-    <link href="{{ URL::asset('assets/plugins/notify/css/notifIt.css') }}" rel="stylesheet" />
+    <link href="{{ secure_asset('assets/plugins/notify/css/notifIt.css') }}" rel="stylesheet" />
     @section('title')
         صلاحيات المستخدمين - مورا سوفت للادارة القانونية
     @stop
@@ -131,6 +131,6 @@
 @endsection
 @section('js')
     <!--Internal  Notify js -->
-    <script src="{{ URL::asset('assets/plugins/notify/js/notifIt.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/notify/js/notifit-custom.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/notify/js/notifIt.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/notify/js/notifit-custom.js') }}"></script>
 @endsection

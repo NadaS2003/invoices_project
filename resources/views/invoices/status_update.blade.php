@@ -169,7 +169,7 @@
 @endsection
 @section('js')
     <!-- Internal Select2 js-->
-    <script src="{{ URL::asset('assets/plugins/select2/js/select2.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/select2/js/select2.min.js') }}"></script>
     <!--Internal  Form-elements js-->
     <script src="{{ URL::asset('assets/js/advanced-form-elements.js') }}"></script>
     <script src="{{ URL::asset('assets/js/select2.js') }}"></script>

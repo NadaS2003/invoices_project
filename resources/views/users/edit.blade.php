@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('css')
     <!-- Internal Nice-select css  -->
-    <link href="{{URL::asset('assets/plugins/jquery-nice-select/css/nice-select.css')}}" rel="stylesheet" />
+    <link href="{{secure_asset('assets/plugins/jquery-nice-select/css/nice-select.css')}}" rel="stylesheet" />
     @section('title')
         تعديل مستخدم - مورا سوفت للادارة القانونية
     @stop
@@ -118,11 +118,11 @@
 @section('js')
 
     <!-- Internal Nice-select js-->
-    <script src="{{URL::asset('assets/plugins/jquery-nice-select/js/jquery.nice-select.js')}}"></script>
-    <script src="{{URL::asset('assets/plugins/jquery-nice-select/js/nice-select.js')}}"></script>
+    <script src="{{secure_asset('assets/plugins/jquery-nice-select/js/jquery.nice-select.js')}}"></script>
+    <script src="{{secure_asset('assets/plugins/jquery-nice-select/js/nice-select.js')}}"></script>
 
     <!--Internal  Parsley.min js -->
-    <script src="{{URL::asset('assets/plugins/parsleyjs/parsley.min.js')}}"></script>
+    <script src="{{secure_asset('assets/plugins/parsleyjs/parsley.min.js')}}"></script>
     <!-- Internal Form-validation js -->
-    <script src="{{URL::asset('assets/js/form-validation.js')}}"></script>
+    <script src="{{secure_asset('assets/js/form-validation.js')}}"></script>
 @endsection

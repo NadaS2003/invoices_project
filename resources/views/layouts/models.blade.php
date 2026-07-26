@@ -7,7 +7,7 @@
 						<div class="action-header clearfix">
 							<div class="float-left hidden-xs d-flex ml-2">
 								<div class="img_cont mr-3">
-									<img src="{{URL::asset('assets/img/faces/6.jpg')}}" class="rounded-circle user_img" alt="img">
+									<img src="{{secure_asset('assets/img/faces/6.jpg')}}" class="rounded-circle user_img" alt="img">
 								</div>
 								<div class="align-items-center mt-2">
 									<h4 class="text-white mb-0 font-weight-semibold">Daneil Scott</h4>
@@ -52,7 +52,7 @@
 							</div>
 							<div class="d-flex justify-content-start">
 								<div class="img_cont_msg">
-									<img src="{{URL::asset('assets/img/faces/6.jpg')}}" class="rounded-circle user_img_msg" alt="img">
+									<img src="{{secure_asset('assets/img/faces/6.jpg')}}" class="rounded-circle user_img_msg" alt="img">
 								</div>
 								<div class="msg_cotainer">
 									Hi, how are you Jenna Side?
@@ -65,12 +65,12 @@
 									<span class="msg_time_send">8:55 AM, Today</span>
 								</div>
 								<div class="img_cont_msg">
-									<img src="{{URL::asset('assets/img/faces/9.jpg')}}" class="rounded-circle user_img_msg" alt="img">
+									<img src="{{secure_asset('assets/img/faces/9.jpg')}}" class="rounded-circle user_img_msg" alt="img">
 								</div>
 							</div>
 							<div class="d-flex justify-content-start ">
 								<div class="img_cont_msg">
-									<img src="{{URL::asset('assets/img/faces/6.jpg')}}" class="rounded-circle user_img_msg" alt="img">
+									<img src="{{secure_asset('assets/img/faces/6.jpg')}}" class="rounded-circle user_img_msg" alt="img">
 								</div>
 								<div class="msg_cotainer">
 									I am good too, thank you for your chat template
@@ -83,12 +83,12 @@
 									<span class="msg_time_send">9:05 AM, Today</span>
 								</div>
 								<div class="img_cont_msg">
-									<img src="{{URL::asset('assets/img/faces/9.jpg')}}" class="rounded-circle user_img_msg" alt="img">
+									<img src="{{secure_asset('assets/img/faces/9.jpg')}}" class="rounded-circle user_img_msg" alt="img">
 								</div>
 							</div>
 							<div class="d-flex justify-content-start ">
 								<div class="img_cont_msg">
-									<img src="{{URL::asset('assets/img/faces/6.jpg')}}" class="rounded-circle user_img_msg" alt="img">
+									<img src="{{secure_asset('assets/img/faces/6.jpg')}}" class="rounded-circle user_img_msg" alt="img">
 								</div>
 								<div class="msg_cotainer">
 									Yo, Can you update Views?
@@ -101,12 +101,12 @@
 									<span class="msg_time_send">9:10 AM, Today</span>
 								</div>
 								<div class="img_cont_msg">
-									<img src="{{URL::asset('assets/img/faces/9.jpg')}}" class="rounded-circle user_img_msg" alt="img">
+									<img src="{{secure_asset('assets/img/faces/9.jpg')}}" class="rounded-circle user_img_msg" alt="img">
 								</div>
 							</div>
 							<div class="d-flex justify-content-start ">
 								<div class="img_cont_msg">
-									<img src="{{URL::asset('assets/img/faces/6.jpg')}}" class="rounded-circle user_img_msg" alt="img">
+									<img src="{{secure_asset('assets/img/faces/6.jpg')}}" class="rounded-circle user_img_msg" alt="img">
 								</div>
 								<div class="msg_cotainer">
 									Yo, Can you update Views?
