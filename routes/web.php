@@ -32,18 +32,13 @@ require __DIR__.'/auth.php';
 Route::get('/', function () {
     return view('auth.login');
 });
-Route::get('/run-seeders', function () {
-    \Illuminate\Support\Facades\Artisan::call('db:seed', [
-        '--class' => 'createAdminUserSeeder'
-    ]);
 
-    \Illuminate\Support\Facades\Artisan::call('db:seed', [
-        '--class' => 'permissionTableSeeder'
-    ]);
+Route::get('/run-seeders', function () {
+    \Artisan::call('db:seed', ['--class' => 'createAdminUserSeeder']);
+    \Artisan::call('db:seed', ['--class' => 'permissionTableSeeder']);
 
     return "Seeders executed successfully!";
-});
-
+})->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
 Route::get('/invoices',[InvoicesController::class,'index']);
 Route::get('/invoices/create',[InvoicesController::class,'create']);
 Route::post('/invoices/store',[InvoicesController::class,'store'])->name('invoices.store');
