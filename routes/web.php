@@ -32,6 +32,17 @@ require __DIR__.'/auth.php';
 Route::get('/', function () {
     return view('auth.login');
 });
+Route::get('/run-seeders', function () {
+    \Illuminate\Support\Facades\Artisan::call('db:seed', [
+        '--class' => 'createAdminUserSeeder'
+    ]);
+
+    \Illuminate\Support\Facades\Artisan::call('db:seed', [
+        '--class' => 'permissionTableSeeder'
+    ]);
+
+    return "Seeders executed successfully!";
+});
 
 Route::get('/invoices',[InvoicesController::class,'index']);
 Route::get('/invoices/create',[InvoicesController::class,'create']);
