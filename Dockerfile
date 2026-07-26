@@ -1,6 +1,6 @@
 FROM php:8.2-fpm
 
-# Install system dependencies
+# Install dependencies
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -8,14 +8,13 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxml2-dev \
     zip \
-    unzip \
-    libzip-dev
+    unzip
 
 # Clear cache
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get clean && apt-get rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
 # Get latest Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -26,13 +25,16 @@ WORKDIR /var/www
 # Copy existing application directory contents
 COPY . /var/www
 
-# Install composer dependencies ignoring platform requirements for smooth build
-RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs
+# Copy existing application directory permissions
+RUN chown -R www-data:www-data /var/www \
+    && chmod -R 775 /var/www/storage \
+    && chmod -R 775 /var/www/bootstrap/cache
 
-# Set permissions
-RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+# Install composer dependencies
+RUN composer install --no-dev --optimize-autoloader
 
-EXPOSE 80
+# Expose port 8080 (Render uses $PORT)
+EXPOSE 10000
 
-# Run migrations, seeders, cache configuration, and start php-fpm
-CMD ["sh", "-c", "php artisan config:clear && php artisan route:clear && php artisan migrate --force && php artisan db:seed --class=permissionTableSeeder --force && php artisan db:seed --class=createAdminUserSeeder --force && php -S 0.0.0.0:$PORT -t public"]
+# Run migrations, seeders, storage link, and start built-in php server
+CMD ["sh", "-c", "php artisan config:clear && php artisan route:clear && php artisan migrate --force && php artisan db:seed --class=permissionTableSeeder --force && php artisan db:seed --class=createAdminUserSeeder --force && php artisan storage:link && php -S 0.0.0.0:$PORT -t public"]
