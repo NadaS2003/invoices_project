@@ -42,7 +42,7 @@ class InvoicesController extends Controller
     public function create()
     {
         $sections = sections::all();
-        return view('invoices\add_invoices', compact('sections'));
+        return view('invoices.add_invoices', compact('sections'));
     }
 
 
