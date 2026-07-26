@@ -35,4 +35,4 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction
 # Expose port and run
 EXPOSE 10000
 
-CMD ["sh", "-c", "php artisan config:clear && php artisan route:clear && php artisan migrate --force && php artisan db:seed --class=permissionTableSeeder --force && php artisan db:seed --class=createAdminUserSeeder --force && php artisan storage:link && php -S 0.0.0.0:$PORT -t public"]
+CMD ["sh", "-c", "php artisan config:clear && php artisan route:clear && php artisan migrate --force && php artisan storage:link && php -S 0.0.0.0:$PORT -t public"]
